@@ -10,13 +10,14 @@ print(epl)
 print(epl.describe())
 print(epl.info())
 
-epl_goals_top5 = epl[['Squad', 'GF', 'LgRk']]
+epl_goals_top5 = epl[['Squad', 'GF', 'GA', 'LgRk']]
 epl_goals_top5 = epl_goals_top5[epl_goals_top5.LgRk < 6]
 
-
-plt.bar(data=epl_goals_top5, x='Squad', height='GF', color=['lightblue', 'red', 'blue', 'gray', 'red'])
+plt.bar(data=epl_goals_top5, x='Squad', height='GF', color=['green'])
+plt.bar(data=epl_goals_top5, x='Squad', height='GA', color=['red'])
 plt.title('Top 5 Premier League Teams\' Goals')
 plt.xlabel("Team")
-plt.ylabel("Goals")
+plt.ylabel("Goals For/Against")
+plt.legend(['Goals For', 'Goals Against'])
 plt.show()
 plt.close()
