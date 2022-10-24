@@ -1,3 +1,4 @@
+from gzip import FNAME
 import pandas as pd
 import numpy as np
 import seaborn as sns
@@ -17,7 +18,7 @@ plt.bar(data=epl_goals_top5, x='Squad', height='GF', color=['green'])
 plt.bar(data=epl_goals_top5, x='Squad', height='GA', color=['red'])
 plt.title('Top 5 Premier League Teams\' Goals')
 plt.xlabel("Team")
-plt.ylabel("Goals For/Against")
+plt.ylabel("Goals")
 plt.legend(['Goals For', 'Goals Against'])
 plt.show()
 plt.close()
